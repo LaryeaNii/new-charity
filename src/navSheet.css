@@ -1,4 +1,4 @@
-/* Custom CSS */
+
 .myNavBar {
     background-color: rgb(249, 245, 233);
   }
@@ -7,7 +7,7 @@
     position: relative;
     left: 10%;
   }
-  
+
   .me-auto > .main-nav:not(:last-child) {
     margin-right: 20px;
   }
