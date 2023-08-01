@@ -1,5 +1,143 @@
+
+
 .first{
-    background-color: rgb(249,245,233);
-    width: 100vw;
-    height: 100vw;
+    height: 100vh;
+    background-color:  rgb(249,245,233);   
+}
+.title{
+    width: 60%;
+    padding: 100px;
+}
+
+.title h1{
+    font-family: 'Borel', cursive;
+    font-size: 5.3em;
+    font-weight: 900;
+    
+}
+.title p{
+    font-family: 'Poppins';
+    font-size: 1.0rem;
+}
+.additional img{
+    max-width: 50px;
+    margin-right: -15px;
+}
+.additional{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.additional p{
+    margin-top: 10px;
+}
+
+button{
+    color: white;
+    background-color: rgb(6, 116, 6);
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+}
+.second{
+    background-color: rgb(1,112,93);
+    height: 50vh;
+}
+.stats{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 200px;
+    margin: 0 0 50px 50px;
+}
+.stat-description{
+    display: flex;
+    font-family: 'Poppins';
+    color: white;
+    align-items: center;
+    width: 20%;
+    gap: 20px;
+}
+.enlarge{
+    font-size: 30px;
+}
+
+.stat-icon{
+    max-width: 100px;
+}
+.donate-card{
+    width: 500px;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 80px;
+    top: 310px;
+    border-radius: 10%;
+}
+.donate-card h2{
+    font-family: 'Borel';
+    font-size: 2.9em;
+    padding: 80px 0 40px 40px; 
+    margin-bottom: -40px;
+}
+.donate-card p{
+    font-family: 'Poppins';
+    width: 90%;
+    padding-left: 40px;
+}
+.amount {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8em;
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 20px;
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .amount:hover {
+    background-color: rgb(6, 116, 6);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+.money-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+  
+  label {
+    margin-bottom: 5px; 
+  }
+  input{
+    height: 60px;
+    border-radius: 20px;
+    border: 1px solid grey;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+ 
+  #short-donate{
+    transition: transform 0.3s ease;
+  }
+  
+  #short-donate:hover {
+    transform: scale(0.9);
+  }
+
+
+.third{
+    height: 100vh;
+    background-color:rgb(249,245,233) ;
 }
