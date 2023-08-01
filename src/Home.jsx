@@ -82,9 +82,41 @@ const Home = () => {
         {/*////////////////////////////////////////////// Section 3 ///////////////////////////////////////////////////// */}
         
         <div className="third">
+            <div className="title" id='mission-title'>
+              <h1>The mission & goals of our organization</h1> 
+              <p>This is how we choose to empower the individuals and communities around us. 
+                Ranging from supporting orphanages, gift giving to the needy, 
+                and supporting students without the resources to continue with their education</p>
+             <div className="additional">
+             <Link to="/donate"> 
+          <button>Donate Now </button>
+            </Link> 
+           </div>
+           </div>
+        
+        <div className="categories">
+                    <div className="mission-category">
+                        <img src="./food-svgrepo-com.svg" alt="food icon" className='stat-icon' />
+                        <p className='category-text'>Food Donation</p>
+                    </div>
+
+                    <div className="mission-category">
+                        <img src="./books-svgrepo-com.svg" alt="books icon" className='stat-icon' />
+                        <p className='category-text'>Education Aid</p>
+                    </div>
+            
+                    <div className="mission-category">
+                            <img src="./hospital-chart-style-s-svgrepo-com.svg" alt="hospital icon" className='stat-icon' />
+                            <p className='category-text'>Medical Care</p>
+                       </div>                       
+                    <div className="mission-category">
+                        <img src="./gift-svgrepo-com.svg" alt="gift icon" className='stat-icon' />
+                        <p className='category-text'>Gift Giving</p>
+                       </div>
+        </div>
 
         </div>
-        
+
     </div> );
 }
  

@@ -1,10 +1,11 @@
   .myNavBar{
     background-color:  rgb(249,245,233);
+    
   }
   
   .me-auto {
     position: relative;
-    left: 10%;
+    left: 15%;
   }
 
   .me-auto > .main-nav:not(:last-child) {

@@ -140,4 +140,36 @@ button{
 .third{
     height: 100vh;
     background-color:rgb(249,245,233) ;
+    display: flex;
+}
+#mission-title{
+    padding-top: 120px;
+    font-size: 0.7rem;
+    width: 55%;
+}
+.categories{
+    padding-top: 80px;
+    margin-right: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.mission-category{
+    width: 300px;
+    height: 200px;
+    background-color: rgba(221, 206, 162, 0.326);
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 20px;   
+}
+.mission-category:nth-child(3),
+.mission-category:nth-child(4) {
+    margin-left: 130px;
+}
+.category-text{
+    font-family: 'Borel';
+    font-size: 1.5rem;
 }
