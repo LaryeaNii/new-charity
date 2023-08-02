@@ -52,6 +52,7 @@ const Footer = () => {
         </div>
 
         <div className='copyright-container'>
+            <hr />
             <p className='copyright'>Copyright © 2023 Charity.
              All rights reserved.</p>
        

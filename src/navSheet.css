@@ -70,8 +70,15 @@
   }
   
   @media (max-width: 1500px) {
+     .myNavBar{
+      padding: 20px;
+      padding-right: 40px;
+      padding-left: 50px;
+     }
+
     .me-auto {
       left: 0;
+
     }
   
     .butt {
