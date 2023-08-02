@@ -5,7 +5,7 @@
   
   .me-auto {
     position: relative;
-    left: 15%;
+    left: 20%;
   }
 
   .me-auto > .main-nav:not(:last-child) {

@@ -1,0 +1,77 @@
+
+footer{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(1,112,93);
+    position: absolute;
+    left: 0;
+    bottom: 100;
+    color: white;
+  }
+  
+  .footer-container{
+    display: flex;
+    padding: 30px;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+  .message{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  }
+  .message img{
+    width: 100px;
+  }
+  
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 20px; 
+  }
+  
+  .grid-item {
+    padding: 20px;
+  }
+  
+  .grid-item ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .grid-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .grid-item li {
+    margin-bottom: 5px;
+  }
+  
+  .grid-item li a {
+    text-decoration: none; 
+    color: #ffffff; 
+  }
+  
+  .grid-item li a:hover {
+    text-decoration: underline;
+  }
+  .request{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  }
+  .request p{
+    font-size: 26px;
+  }
+  .footer-button{
+    background-color: #ffc107;
+    color: white;
+  }

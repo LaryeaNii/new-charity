@@ -2,7 +2,7 @@
 
 .first{
     height: 100vh;
-    background-color:  rgb(249,245,233);   
+    background-color: rgb(249,245,233);   
 }
 .title{
     width: 60%;
@@ -172,4 +172,176 @@ button{
 .category-text{
     font-family: 'Borel';
     font-size: 1.5rem;
+}
+
+.scroll-section{
+    width: 100%;
+    height: 100vh;
+    background-color: white;   
+    padding-bottom: 100px;
+}
+
+.project-container{
+    display: flex;
+    gap: 70px;
+    width: 100%;
+    padding: 30px;
+    overflow-x: hidden;
+}
+.projects{
+   background-color: rgb(230, 230, 230);
+   width: 70%;
+   border-radius: 30px;
+   padding: 18px;
+   padding-bottom: -40px;
+}
+.card-project-title{
+    font-family: 'Poppins';
+    padding: 20px;
+    font-weight: 900;
+}
+.card-project-description{
+    font-family: 'Poppins';
+    padding: 20px;
+    margin-top: -50px;
+}
+.card-custom-progress {
+    font-family: 'Poppins';
+    padding: 20px;
+    margin-top: -50px;
+    border-radius: 10px;
+}
+  
+.card-custom-progress progress {
+    appearance: none; 
+    background-color: rgb(0, 64, 26); 
+    border: none; 
+    border-radius: 85px;
+    height: 6px;
+    width: 203px; 
+  }
+  
+  .card-custom-progress progress::-webkit-progress-value {
+    background-color: rgb(0, 64, 26); 
+  }
+  
+  .card-custom-progress progress::-moz-progress-bar {
+    background-color: rgb(0, 64, 26); 
+  }
+  
+  .card-current-amount {
+    margin-top: 5px;
+    font-weight: bold;
+  }
+
+
+.card-current-amount{
+    font-family: 'Poppins';
+    padding: 20px;
+    margin-top: -40px;
+}
+.flex-text{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.current-project{
+    font-family:'Borel';
+    font-size: 2.5rem;
+}
+.proj-img{
+    width: 280px;
+    height: 230px;
+    border-radius: 40px;
+}
+.volunteer-section{
+    height: 100vh;
+    background-color: rgb(249,245,233);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#volunteer-title{
+ padding-top: 120px;
+ width: 84%;
+ text-align: center;
+ margin-bottom: -40px;
+}
+.testimony{
+    padding-bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.testimony-card{
+    width: 390px;
+    height: 260px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+.profile{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute; 
+  
+}
+#profile-icon{
+  width: 50px;
+  height: 50px;  
+  border-radius: 50%;   
+}
+.sixth-plea{
+    height: 60vh; 
+    background-color:rgb(249,245,233);
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    border-radius: 30px;
+}
+
+.plea{
+    width: 70vw;
+    height: 40vh;
+    background-color: rgb(1,112,93);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 70px;
+}
+.plea h1{
+    font-family: 'Borel';
+    color: white;
+
+}
+.plea-donate-button {
+    background-color: #ffc107;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plea-donate-button:hover {
+    background-color: #ffca28;
+    transform: translateY(-2px);
+}
+
+.plea-small-container{
+    width: 60%;
+}
+.plea-button-container{
+    width: 40%;
+    display: flex;
+    justify-content: center;
 }

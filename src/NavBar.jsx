@@ -18,8 +18,7 @@ function BasicExample() {
             <NavLink to="/" className='main-nav'>Home</NavLink>
             <NavLink to="/about" className='main-nav' >About</NavLink>
             <NavLink to="/causes"className='main-nav'>Causes</NavLink>
-            <NavLink to="/event"className='main-nav'>Event</NavLink>
-            <NavLink to="/blog" className='main-nav'>Blog</NavLink>
+            <NavLink to="/gallery"className='main-nav'>Gallery</NavLink>
             <NavLink to="/volunteer" className='main-nav'>Volunteer</NavLink>
             <NavLink to="/contact" className='main-nav'>Contact</NavLink>
             <NavLink to="/donate" id='donate-special' className='main-nav'>Donate</NavLink>

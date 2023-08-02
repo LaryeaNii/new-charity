@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import './homeStyle.css'
 import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 
-const Home = () => {
+const Home = ({charityData}) => {
 
 
    const [donateAmount, setDonateAmount] = useState('');
@@ -10,6 +11,20 @@ const Home = () => {
    const handleSelectAmount =(amount)=>{
     setDonateAmount(amount);
    } 
+
+   const projectContainerRef = useRef(null);
+
+    const scrollLeft = () => {
+      if (projectContainerRef.current) {
+        projectContainerRef.current.scrollBy({ left: -200, behavior: 'smooth' }); 
+      }
+    };
+  
+    const scrollRight = () => {
+      if (projectContainerRef.current) {
+        projectContainerRef.current.scrollBy({ left: 200, behavior: 'smooth' }); 
+      }
+    };   
    
 
     return (
@@ -114,8 +129,94 @@ const Home = () => {
                         <p className='category-text'>Gift Giving</p>
                        </div>
         </div>
-
         </div>
+
+         {/*////////////////////////////////////////////// Section 4 ///////////////////////////////////////////////////// */}
+        
+        <div className='scroll-section'>
+
+        <div className="flex-text"> 
+        <div className='current-project'>Our Current Projects</div>
+        <div className='arrows'>
+         <img src="./icons8-back-50.png" alt="back" className="click" onClick={scrollLeft}/> 
+         <img src="./icons8-forward-50.png" alt="forward" className="click" onClick={scrollRight} />
+        </div>
+    </div>
+        
+        <div className="project-container" ref={projectContainerRef}> 
+       {charityData.map((project) => (
+        <div className="projects" key={project.index}>
+          <img className='proj-img' src={project.img} alt={`Project ${project.index}`} />
+          <p className='card-project-title'>{project.title}</p>
+          <p className='card-project-description'>{project.description}</p>
+          <div className='card-custom-progress'><progress value={project.amountReceived} max={project.amountNeeded} /></div>
+          <p className='card-current-amount'>₵{project.amountReceived}/{project.amountNeeded}</p>
+        </div>
+      ))}</div>
+        </div>
+             
+         {/*////////////////////////////////////////////// Section 5 ///////////////////////////////////////////////////// */}
+       
+       <div className="volunteer-section">
+        <div className="title" id='volunteer-title'>
+            <h1>Our Volunteers</h1>
+            <p>The volunteers of our foundation are the heartbeat 
+                of our mission and the driving force behind our impact. 
+                Their dedication, passion, and unwavering commitment are 
+                what make our programs and initiatives successful. 
+                These remarkable individuals selflessly contribute their time, 
+                skills, and energy to support our cause, making 
+                a tangible difference in the lives of those we serve.</p>
+            <Link to="/volunteer"> 
+          <button>Apply as volunteer </button>
+            </Link>
+        </div>
+       <div className="testimony">
+        <div className="testimony-card">
+            <p>"From the moment I joined as a volunteer, I knew I had found my place. 
+                The dedication of this foundation to its mission is unwavering, 
+                and I'm humbled to contribute my time and skills to such a worthy cause."</p>  
+            <div className="profile"> 
+            <img src="./profile1.jpg" alt="pic" className='stat-icon' id='profile-icon' />
+            <p>Lily</p>
+            </div>     
+        </div>
+        <div className="testimony-card">
+            <p>"I am incredibly honored to be part of this foundation's volunteer team.
+                 The work we do here truly touches lives and brings hope to those in need. 
+                 The sense of purpose I feel when I see the people's smiles."</p>  
+            <div className="profile"> 
+            <img src="./profile2.jpg" alt="pic" className='stat-icon' id='profile-icon' />
+            <p>Sarah</p>
+            </div>     
+        </div>
+        <div className="testimony-card">
+            <p>"Volunteering with this foundation has been a transformative experience for me. 
+                I initially joined hoping to contribute to a good cause, but it turned out to be so much more."</p>  
+            <div className="profile"> 
+            <img src="./profile3.jpg" alt="pic" className='stat-icon' id='profile-icon' />
+            <p>Emily</p>
+            </div>     
+        </div>
+       </div>
+    
+       </div>
+ 
+         {/*////////////////////////////////////////////// Section 6 ///////////////////////////////////////////////////// */}
+       <div className="sixth-plea">
+            <div className="plea">
+                <div className='plea-small-container'><h1>It takes a small change to make a big difference.</h1></div> 
+                <div className='plea-button-container'>
+                  <Link to='./donate'>
+                  <button className='plea-donate-button'>Donate Now</button>
+                  </Link>
+                </div> 
+            </div>
+       </div>
+
+    
+       
+      
 
     </div> );
 }
