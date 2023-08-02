@@ -1,17 +1,19 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import PaymentFormModal from './PaymentFormModal';
 import './homeStyle.css';
 import { Link } from 'react-router-dom';
 
 const Home = ({ charityData }) => {
-  const [donateAmount, setDonateAmount] = useState('');
+  const [donateAmount, setDonateAmount] = useState(0);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
 
   const toggleVideoModal = () => {
     setIsVideoModalOpen(!isVideoModalOpen);
   };
 
   const handleSelectAmount = (amount) => {
-    setDonateAmount(amount);
+    setDonateAmount(parseFloat(amount));
   };
 
   const videoModalRef = useRef();
@@ -46,6 +48,26 @@ const Home = ({ charityData }) => {
     }
   };
 
+  const togglePaymentModal = () => {
+    setIsPaymentModalOpen(!isPaymentModalOpen);
+  };
+
+  const handlePaymentSubmit = (paymentDetails) => {
+    // Implement secure payment processing using a payment gateway (e.g., Stripe)
+    // For example:
+    // SomePaymentService.processPayment(paymentDetails)
+    //   .then((response) => {
+    //     console.log('Payment successful:', response);
+    //     // Do something after successful payment
+    //   })
+    //   .catch((error) => {
+    //     console.error('Payment failed:', error);
+    //     // Handle payment failure
+    //   });
+
+    // For demonstration purposes, we'll log the payment details to the console.
+    console.log('Payment Details:', paymentDetails);
+  };
 
   return (
     <div>
@@ -60,9 +82,9 @@ const Home = ({ charityData }) => {
             in communities worldwide.
           </p>
           <div className="additional">
-            <Link to="/donate">
+          <Link to="/donate">
               <button>Donate Now</button>
-            </Link>
+           </Link>
             <img
               src="./play-circle-svgrepo-com.svg"
               alt="play"
@@ -92,7 +114,7 @@ const Home = ({ charityData }) => {
               placeholder="₵"
               value={`₵${donateAmount}`}
             />
-            <button id="short-donate">Donate Now</button>
+            <button id="short-donate" onClick={togglePaymentModal}>Donate Now</button>
           </div>
         </div>
       </div>
@@ -277,6 +299,14 @@ const Home = ({ charityData }) => {
           </div>
         </div>
       )}
+      {isPaymentModalOpen && (
+        <PaymentFormModal
+          donateAmount={donateAmount}
+          onClose={togglePaymentModal}
+          onSubmit={handlePaymentSubmit}
+        />
+      )}
+
     </div>
   );
 };
