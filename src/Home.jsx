@@ -148,7 +148,47 @@ const Home = ({ charityData }) => {
           </div>
         </div>
       </div>
-
+      {/*////////////////////////////////////////////// Blog Section  ///////////////////////////////////////////////////// */}
+     
+     <div className="blog-section">
+        <div className='title' id="blog-title">
+          <h1> Read our latest news and updates.</h1>
+          <Link to="./blogs"> <p>Read All</p></Link>
+        </div>
+        <div className="blog-container">
+            <div className="left-container">
+              <div className="blog-card">
+                <img src="./pic1.jpg" alt="blog pic" />
+                <div><p>Donating books and other educational material to the local schools in Aburi</p>
+                <Link to="./blogreader"><p className='blog-link'>Read More →</p></Link></div>
+                
+              </div>
+            </div>
+            <div className="right-container">
+              <div className="blog-card-right">
+                <img src="./pic2.jpg" alt="blog pic" />
+                <div><p>Supporting Local Families in Aburi with welfare funds</p>
+                <Link to="./blogreader"><p className='blog-link'>Read More →</p></Link></div>
+      
+              </div>
+              <div className="blog-card-right">
+                <img src="./pic3.jpg" alt="blog pic" />
+               <div><p>Responding to the flood disaster in Accra</p>
+               <Link to="./blogreader"><p className='blog-link'>Read More →</p></Link> </div>
+                
+              </div>
+            </div>
+        </div>
+     </div>
+     
+     
+     
+     
+     
+     
+     
+     
+     
       {/*////////////////////////////////////////////// Section 3 ///////////////////////////////////////////////////// */}
       <div className="third">
         <div className="title" id="mission-title">
