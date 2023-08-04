@@ -12,6 +12,7 @@ import Donate from './Donate';
 import charityData from './CharityData';
 import Footer from './Footer';
 import BlogReader from './BlogReader';
+import blogdata from './BlogData';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -21,7 +22,7 @@ function App() {
     <BrowserRouter>
       <NavBar/>
       <Routes>
-        <Route path="/" element={<Home  charityData={charityData} />} />
+        <Route path="/" element={<Home  charityData={charityData} blogdata={blogdata} />} />
         <Route path="/about" element={<About />} />
         <Route path='/blogs' element={<Causes/>}/>
         <Route path='/gallery' element={<Event />} />

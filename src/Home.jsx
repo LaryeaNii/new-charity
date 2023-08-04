@@ -3,7 +3,7 @@ import PaymentFormModal from './PaymentFormModal';
 import './homeStyle.css';
 import { Link } from 'react-router-dom';
 
-const Home = ({ charityData }) => {
+const Home = ({ charityData, blogdata }) => {
   const [donateAmount, setDonateAmount] = useState(0);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
@@ -158,22 +158,22 @@ const Home = ({ charityData }) => {
         <div className="blog-container">
             <div className="left-container">
               <div className="blog-card">
-                <img src="./pic1.jpg" alt="blog pic" />
-                <div><p>Donating books and other educational material to the local schools in Aburi</p>
+                <img src={blogdata[0].blogCoverImage} alt="blog pic" />
+                <div><p>{blogdata[0].blogHeadline}</p>
                 <Link to="./blogreader"><p className='blog-link'>Read More →</p></Link></div>
                 
               </div>
             </div>
             <div className="right-container">
               <div className="blog-card-right">
-                <img src="./pic2.jpg" alt="blog pic" />
-                <div><p>Supporting Local Families in Aburi with welfare funds</p>
+                <img src={blogdata[1].blogCoverImage} alt="blog pic" />
+                <div><p>{blogdata[1].blogHeadline}</p>
                 <Link to="./blogreader"><p className='blog-link'>Read More →</p></Link></div>
       
               </div>
               <div className="blog-card-right">
-                <img src="./pic3.jpg" alt="blog pic" />
-               <div><p>Responding to the flood disaster in Accra</p>
+                <img src={blogdata[2].blogCoverImage} alt="blog pic" />
+               <div><p>{blogdata[2].blogHeadline}</p>
                <Link to="./blogreader"><p className='blog-link'>Read More →</p></Link> </div>
                 
               </div>
