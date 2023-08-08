@@ -18,7 +18,8 @@
     
 }
 .all-blog-card img{
-    max-width: 200px;
+    width: 200px;
+    height: 150px;
 }
 .all-blog-card p{
     max-width: 200px;
