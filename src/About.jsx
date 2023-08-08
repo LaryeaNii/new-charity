@@ -1,7 +1,12 @@
+
 const About = () => {
+
     return ( 
-   
-          <h1>About Component</h1>
+     <div>
+        {/* an about component */}
+        <h1>About Us</h1>
+     </div>
+          
 
     );
 }

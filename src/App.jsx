@@ -24,12 +24,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home  charityData={charityData} blogdata={blogdata} />} />
         <Route path="/about" element={<About />} />
-        <Route path='/blogs' element={<Causes/>}/>
+        <Route path='/blogs' element={<Causes blogdata={blogdata}/>}/>
         <Route path='/gallery' element={<Event />} />
         <Route path='/volunteer' element={<Volunteer />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/donate' element={<Donate/>} />
-        <Route path='/blogreader' element={<BlogReader/>} />
+        <Route path="/blogreader/:blogId" element={<BlogReader blogdata={blogdata} />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

@@ -79,7 +79,8 @@ footer{
 
   @media (max-width: 1500px) {
     .footer{
-      padding-left: -10px;
+      padding-left: 10px;
+      width: 90%;
     }
 
    .footer-container{
@@ -88,6 +89,9 @@ footer{
     padding: 0;
     align-items: center;
    } 
+   .grid{
+    grid-template-columns: 1fr 1fr;
+   }
    .message{
     display: none;
    }

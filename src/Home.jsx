@@ -8,6 +8,8 @@ const Home = ({ charityData, blogdata }) => {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
 
+  const lastThreeBlogs = blogdata.slice(-3);
+
   const toggleVideoModal = () => {
     setIsVideoModalOpen(!isVideoModalOpen);
   };
@@ -150,37 +152,31 @@ const Home = ({ charityData, blogdata }) => {
       </div>
       {/*////////////////////////////////////////////// Blog Section  ///////////////////////////////////////////////////// */}
      
-     <div className="blog-section">
-        <div className='title' id="blog-title">
-          <h1> Read our latest news and updates.</h1>
-          <Link to="./blogs"> <p>Read All</p></Link>
-        </div>
-        <div className="blog-container">
-            <div className="left-container">
-              <div className="blog-card">
-                <img src={blogdata[0].blogCoverImage} alt="blog pic" />
-                <div><p>{blogdata[0].blogHeadline}</p>
-                <Link to="./blogreader"><p className='blog-link'>Read More →</p></Link></div>
-                
+      <div className="blog-section">
+      <div className="title" id="blog-title">
+        <h1> Read our latest news and updates.</h1>
+        <Link to="./blogs">
+          <p>Read All</p>
+        </Link>
+      </div>
+      <div className="blog-container">
+        <div className="left-container">
+          {lastThreeBlogs.map(blog => (
+            <div className="blog-card" key={blog.blogId}>
+              <img src={blog.blogCoverImage} alt="blog pic" />
+              <div>
+                <p>{blog.blogHeadline}</p>
+                <Link to={`/blogreader/${blog.blogId}`}>
+                  <p className="blog-link">Read More →</p>
+                </Link>
               </div>
             </div>
-            <div className="right-container">
-              <div className="blog-card-right">
-                <img src={blogdata[1].blogCoverImage} alt="blog pic" />
-                <div><p>{blogdata[1].blogHeadline}</p>
-                <Link to="./blogreader"><p className='blog-link'>Read More →</p></Link></div>
-      
-              </div>
-              <div className="blog-card-right">
-                <img src={blogdata[2].blogCoverImage} alt="blog pic" />
-               <div><p>{blogdata[2].blogHeadline}</p>
-               <Link to="./blogreader"><p className='blog-link'>Read More →</p></Link> </div>
-                
-              </div>
-            </div>
+          ))}
         </div>
-     </div>
-     
+      </div>
+    </div>
+
+
      
      
      

@@ -7,7 +7,7 @@ import './navSheet.css';
 
 function BasicExample() {
   return (
-    <Navbar expand="lg" className='myNavBar'>
+    <Navbar expand="lg" className='myNavBar sticky-top'>
       <Container className='hope'>
         <Navbar.Brand as={Link} to="/" id='special-logo'>
           <img src="./charity-svgrepo-com.svg" alt="logo" className='logo' />

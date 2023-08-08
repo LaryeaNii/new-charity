@@ -1,8 +1,10 @@
+.arrows img{
+    cursor: pointer;
+}
 .blog-section{
     background-color: white;
     height: 80vh;
     width: 100%;
-
 }
 .blog-section a{
     text-decoration: none;
@@ -24,13 +26,16 @@
 }
 .blog-container{
     width: 100%;
-    display: flex;   
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 210px;   
 }
 
 .left-container{
     width: 50%;
     display: flex;
-    justify-content: center;
+    gap: 80px;
 }
 .right-container{
     width: 50%;
@@ -44,7 +49,8 @@
     border-radius: 20px;
 }
 .blog-card img{
-    max-width: 500px;
+    width: 340px;
+    height: 280px ;
     padding: 10px;
     border-radius: 20px;
 }
@@ -518,6 +524,8 @@ button{
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding-top: 100px;
+        position: relative;
+        padding-right:30px ;
     }
 
     .stat-description {
@@ -539,14 +547,15 @@ button{
     }
 
     .donate-card {
-        width: 90%;
+        width: 80%;
         height: auto;
         background-color: rgb(255, 255, 255);
         position: relative;
         margin-top: 0px;
         border-radius: 10px;
         padding: 20px;
-        left: 17px;
+        right: 0;
+        left: 38px;
         top: 0px;
     }
 
@@ -710,6 +719,8 @@ button{
         flex-direction: column;
         align-items: center;
         margin-top: 30px;
+        width: 100%;
+        padding: 30px;
     }
 
     #volunteer-title {
@@ -721,7 +732,7 @@ button{
 
     #volunteer-title button{
         position: relative;
-        right: 50px;
+        right: 20px;
     }
 
     .testimony {
@@ -828,82 +839,50 @@ button{
         padding: 5px;
         right: 18px;
       }
+
       .blog-section{
-        background-color: white;
         height: fit-content;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    #blog-title h1{
-        font-size: 1.2rem;
-        padding-top: 20px;
-        text-align: center;
+        width: fit-content;
+        overflow-x: hidden;
     }
 
     #blog-title{
         display: flex;
         flex-direction: column;
-        width: 90%;
-        padding: 20px;
+        padding-top: 40px;
+        margin: 0;
+        text-align: center;
     }
     .blog-container{
-        width: 90%;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 30px;
+        margin: 0;
+        padding: 10px;
+        padding-bottom: 30px;
     }
     .left-container{
-        width: 90%;
-        display: flex;
-        justify-content: center;
-    }
-    .right-container{
-        width: 90%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-    
-    .blog-card{
-        display: flex;
-        flex-direction: row;
         align-items: center;
-        padding-top: 10px;
-        background-color: rgb(240,240,240);
-        border-radius: 20px;
+        margin: 0;
+        left: 0;
+        right: 20px;
+        gap: 10px;
+    }
+    .blog-card{
+        max-width: 230px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .blog-card img{
-        width: 100px;
-        height: 100px;
-        border-radius: 20px;
+        width: 200px;
+        height: 200px;
     }
-    .blog-card p{
-        font-weight: 700;
-        font-size: 12px;
-        max-width: 150px;
-    }
-    .blog-card a{
-        text-decoration: none;
-        color: rgb(2, 50, 2);
-    }
-    .blog-card-right{
-        display: flex;
-        align-items: center;
-        padding: 20px;
-        background-color: rgb(240,240,240);
-        border-radius: 20px;
-    }
-    .blog-card-right img{
-        width: 100px;
-        height: 100px;
-        border-radius: 20px;
-    }
-    .blog-card-right p{
-        font-weight: 700;
-        font-size: 12px;
-    }
-    
       
 }
