@@ -859,7 +859,7 @@ button{
         justify-content: center;
         align-items: center;
         position: relative;
-        right: 30px;
+        right: 0;
         margin: 0;
         padding: 10px;
         padding-bottom: 30px;
@@ -870,18 +870,18 @@ button{
         justify-content: center;
         align-items: center;
         margin: 0;
-        left: 0;
-        right: 20px;
-        gap: 10px;
+        left: 10px;
+        right: 0;
+        gap: 20px;
     }
     .blog-card{
-        max-width: 230px;
+        width: fit-content;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     .blog-card img{
-        width: 200px;
+        width: 300px;
         height: 200px;
     }
       
