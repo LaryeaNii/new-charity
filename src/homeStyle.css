@@ -332,7 +332,7 @@ button{
   
 .card-custom-progress progress {
     appearance: none; 
-    background-color: rgb(0, 64, 26); 
+    background-color: rgb(187, 187, 30); 
     border: none; 
     border-radius: 85px;
     height: 6px;
@@ -340,11 +340,11 @@ button{
   }
   
   .card-custom-progress progress::-webkit-progress-value {
-    background-color: rgb(0, 64, 26); 
+    background-color: rgb(255, 255, 24); 
   }
   
   .card-custom-progress progress::-moz-progress-bar {
-    background-color: rgb(0, 64, 26); 
+    background-color: rgb(255, 255, 24); 
   }
   
   .card-current-amount {
@@ -670,7 +670,7 @@ button{
 
     .card-custom-progress progress {
         appearance: none;
-        background-color: rgb(0, 64, 26);
+        background-color: rgb(255, 255, 255);
         border: none;
         border-radius: 85px;
         height: 6px;
@@ -678,11 +678,11 @@ button{
     }
 
     .card-custom-progress progress::-webkit-progress-value {
-        background-color: rgb(0, 64, 26);
+        background-color: rgb(255, 255, 24);
     }
 
     .card-custom-progress progress::-moz-progress-bar {
-        background-color: rgb(0, 64, 26);
+        background-color: rgb(255, 255, 24);
     }
 
     .card-current-amount {
