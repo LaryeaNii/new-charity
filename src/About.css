@@ -1,0 +1,151 @@
+.about-section{
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.top-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+
+}
+.top-section img{
+  max-width: 340px;
+  height: 500px;
+  z-index: 999;
+
+}
+.about-statement{
+    width: 50%;
+}
+.about-statement h1{
+    font-size: 2.9rem;
+}
+.values{
+    display: flex;
+}
+.middle-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(249, 245, 233);
+    padding: 50px;
+    width: 100%;
+    margin-top: -60px;
+    z-index: -1;
+}
+.value-card{
+    background-color: rgb(255, 255, 255) ;
+    margin: 20px;
+    padding: 20px;
+}
+.team-card img{
+    width: 300px;
+    height: 300px;
+}
+.team-card p{
+    padding-top: 10px ;
+}
+.bottom-section{
+  padding: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-section h2{
+    padding: 30px;
+}
+.all-team{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+@media (max-width: 1500px) {
+    .about-section{
+        padding: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .top-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 30px;
+    
+    }
+    .top-section img{
+      max-width: 340px;
+      height: 200px;
+      z-index: 999;
+      display: none;
+    }
+
+    .about-statement{
+        width: 100%;
+    }
+    .about-statement h1{
+        font-size: 2.9rem;
+    }
+    .values{
+        display: flex;
+        flex-direction: column;
+    }
+    .middle-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(249, 245, 233);
+        padding: 30px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .value-card{
+        background-color: rgb(255, 255, 255) ;
+        margin: 20px;
+        padding: 20px;
+    }
+    .team-card img{
+        width: 300px;
+        height: 300px;
+    }
+    .team-card p{
+        padding-top: 10px ;
+    }
+    .bottom-section{
+      padding: 70px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .bottom-section h2{
+        padding: 30px;
+    }
+    .all-team{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+
+
+
+
+
+
+}
