@@ -15,6 +15,7 @@ import BlogReader from './BlogReader';
 import blogdata from './BlogData';
 import Events from './Events';
 import eventData from './EventData';
+import galleryData from './GalleryData';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -27,7 +28,7 @@ function App() {
         <Route path="/" element={<Home  charityData={charityData} blogdata={blogdata} />} />
         <Route path="/about" element={<About />} />
         <Route path='/blogs' element={<Causes blogdata={blogdata}/>}/>
-        <Route path='/gallery' element={<Gallery/>} />
+        <Route path='/gallery' element={<Gallery galleryData={galleryData}/>} />
         <Route path='/volunteer' element={<Volunteer />} />
         <Route path='/contact' element={<Contact />} />
         <Route path="/faq" element={<Contact/>} />
