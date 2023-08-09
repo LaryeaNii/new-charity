@@ -19,6 +19,7 @@ function BasicExample() {
             <NavLink to="/about" className='main-nav' >About</NavLink>
             <NavLink to="/blogs"className='main-nav'>Blogs</NavLink>
             <NavLink to="/gallery"className='main-nav'>Gallery</NavLink>
+            <NavLink to="/events"className='main-nav'>Events</NavLink>
             <NavLink to="/volunteer" className='main-nav'>Volunteer</NavLink>
             <NavLink to="/contact" className='main-nav'>Contact</NavLink>
             <NavLink to="/donate" id='donate-special' className='main-nav'>Donate</NavLink>

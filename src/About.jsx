@@ -1,8 +1,7 @@
 import './About.css'
 
 
-const About = () => {
-
+const About = () => { 
 
     return ( 
 
