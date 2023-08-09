@@ -14,6 +14,7 @@ import Footer from './Footer';
 import BlogReader from './BlogReader';
 import blogdata from './BlogData';
 import Events from './Events';
+import eventData from './EventData';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -32,7 +33,7 @@ function App() {
         <Route path="/faq" element={<Contact/>} />
         <Route path="/team" element={<About/>} />
         <Route path='/donate' element={<Donate/>} />
-        <Route path='/events' element={<Events/>} />
+        <Route path='/events' element={<Events eventData={eventData}/>} />
         <Route path="/blogreader/:blogId" element={<BlogReader blogdata={blogdata} />} />
       </Routes>
       <Footer/>

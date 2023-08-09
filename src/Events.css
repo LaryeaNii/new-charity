@@ -1,0 +1,100 @@
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+  
+  }
+ .events-title{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 40px;
+ }
+  
+  .event-card {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .event-date-card {
+    background-color: white;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-date-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .event-date-month,
+  .event-date-year {
+    font-size: 0.8rem;
+    padding: 2px;
+  }
+
+  
+  .event-content {
+    display: flex;
+    width: calc(100% - 320px); /* To account for the width of the date card */
+  }
+  
+  .event-image-container {
+    width: 400px;
+    margin-right: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-image {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .event-description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .event-description-date {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  @media (max-width: 1000px) {
+    .event-card {
+      flex-direction: column;
+    }
+  
+    .event-date-card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .event-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .event-image-container {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .event-image {
+      height: auto;
+    }
+    .events-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px;
+      }
+  }
