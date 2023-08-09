@@ -166,7 +166,7 @@ button:hover{
         padding: 6px;
         justify-content: center;
         color: black;
-        width: fit-content;
+        width: 90%;
     }
     textarea{
         padding: 20px;
