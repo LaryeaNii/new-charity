@@ -1,11 +1,47 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import './Gallery.css';
+import supabase from "./config/supabaseclient";
 
-const Gallery = ({ galleryData }) => {
+
+
+
+
+
+const Gallery = () => {
+
+  const [fetchError, setFetchError] = useState(null);
+  const [gallery, setGallery] = useState([]);
+
+
+  useEffect(() => {
+    const fetchGallery = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('gallery')
+          .select();
+
+        if (error) {
+          setFetchError('Could not fetch pictures');
+          console.log(error);
+        } else {
+          setGallery(data || []);
+          setFetchError(null);
+        }
+      } catch (error) {
+        console.error('Error fetching pictures:', error);
+      }
+    };
+
+    fetchGallery();
+  }, []);
+
+  
+
+
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const openModal = (image) => {
-    setSelectedImage(image);
+  const openModal = (imgurl) => {
+    setSelectedImage(imgurl);
   };
 
   const closeModal = () => {
@@ -15,16 +51,17 @@ const Gallery = ({ galleryData }) => {
   return (
     <div>
       <div className="gallery-title">
+        {fetchError && <p>{fetchError}</p>}
         <h1>Take a look through our pictures through the years</h1>
       </div>
       <div className="gallery-container">
-        {galleryData.map((item, index) => (
+        {gallery.map(item => (
           <div
             className="gallery-item"
-            key={index}
-            onClick={() => openModal(item.image)}
+            key={gallery.id}
+            onClick={() => openModal(item.imgurl)}
           >
-            <img src={item.image} alt="picture" />
+            <img src={item.imgurl} alt="picture" />
             <p>{item.description}</p>
           </div>
         ))}
@@ -34,7 +71,7 @@ const Gallery = ({ galleryData }) => {
           <div className="modal-content">
             <img src={selectedImage} alt="picture" />
             <p>
-              {galleryData.find((item) => item.image === selectedImage)
+              {gallery.find((item) => item.imgurl === selectedImage)
                 ?.description}
             </p>
             <button className="modal-close" onClick={closeModal}>

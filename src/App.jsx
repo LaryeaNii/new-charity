@@ -9,14 +9,13 @@ import Volunteer from './Volunteer';
 import Contact from './Contact';
 import Gallery from './Gallery';
 import Donate from './Donate';
-import charityData from './CharityData';
 import Footer from './Footer';
 import BlogReader from './BlogReader';
-import blogdata from './BlogData';
 import Events from './Events';
 import eventData from './EventData';
-import galleryData from './GalleryData';
+import TestApp from './TestApp';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 
 function App() {
@@ -25,17 +24,18 @@ function App() {
     <BrowserRouter>
       <NavBar/>
       <Routes>
-        <Route path="/" element={<Home  charityData={charityData} blogdata={blogdata} />} />
+        <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About />} />
-        <Route path='/blogs' element={<Causes blogdata={blogdata}/>}/>
-        <Route path='/gallery' element={<Gallery galleryData={galleryData}/>} />
+        <Route path='/blogs' element={<Causes/>}/>
+        <Route path='/gallery' element={<Gallery/>} />
         <Route path='/volunteer' element={<Volunteer />} />
         <Route path='/contact' element={<Contact />} />
         <Route path="/faq" element={<Contact/>} />
+        <Route path="/test" element={<TestApp/>} />
         <Route path="/team" element={<About/>} />
         <Route path='/donate' element={<Donate/>} />
         <Route path='/events' element={<Events eventData={eventData}/>} />
-        <Route path="/blogreader/:blogId" element={<BlogReader blogdata={blogdata} />} />
+        <Route path="/blogreader/:blogId" element={<BlogReader />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

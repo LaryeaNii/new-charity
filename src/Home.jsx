@@ -2,13 +2,69 @@ import React, { useState, useEffect, useRef } from 'react';
 import PaymentFormModal from './PaymentFormModal';
 import './homeStyle.css';
 import { Link } from 'react-router-dom';
+import supabase from "./config/supabaseclient";
 
-const Home = ({ charityData, blogdata }) => {
+
+
+const Home = () => {
+
+  const [fetchError, setFetchError] = useState(null);
+  const [blogs, setBlogs] = useState([]);
+  const [fetchCharityError, setFetchCharityError] = useState(null);
+  const [charity, setCharity] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('blogs')
+          .select();
+
+        if (error) {
+          setFetchError('Could not fetch blogs');
+          console.log(error);
+        } else {
+          setBlogs(data || []);
+          setFetchError(null);
+        }
+      } catch (error) {
+        console.error('Error fetching blogs:', error);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+   useEffect(() => {
+      const fetchCharity = async () =>{
+        try{
+          const {data, error} = await supabase
+          .from('charity')
+          .select();
+
+        if(error){
+          setFetchCharityError('Could not fetch charity');
+          console.log(error); 
+        }
+        else{
+          setCharity(data || []);
+          setFetchCharityError(null);
+        }
+      }catch(error){
+          console.error('Error fetching charity:', error); 
+      }
+    };
+      fetchCharity();
+   },[]);
+  
+
+
+
   const [donateAmount, setDonateAmount] = useState(0);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
 
-  const lastThreeBlogs = blogdata.slice(-3);
+  const lastThreeBlogs = blogs.slice(-3);
 
   const toggleVideoModal = () => {
     setIsVideoModalOpen(!isVideoModalOpen);
@@ -153,6 +209,7 @@ const Home = ({ charityData, blogdata }) => {
       {/*////////////////////////////////////////////// Blog Section  ///////////////////////////////////////////////////// */}
      
       <div className="blog-section">
+      {fetchError && <h1>{fetchError}</h1>}
       <div className="title" id="blog-title">
         <h1> Read our latest news and updates.</h1>
         <Link to="./blogs">
@@ -162,11 +219,11 @@ const Home = ({ charityData, blogdata }) => {
       <div className="blog-container">
         <div className="left-container">
           {lastThreeBlogs.map(blog => (
-            <div className="blog-card" key={blog.blogId}>
-              <img src={blog.blogCoverImage} alt="blog pic" />
+            <div className="blog-card" key={blog.id}>
+              <img src={blog.blogcoverimage} alt="blog pic" />
               <div>
-                <p>{blog.blogHeadline}</p>
-                <Link to={`/blogreader/${blog.blogId}`}>
+                <p>{blog.blogheadline}</p>
+                <Link to={`/blogreader/${blog.id}`}>
                   <p className="blog-link">Read More →</p>
                 </Link>
               </div>
@@ -236,15 +293,16 @@ const Home = ({ charityData, blogdata }) => {
         </div>
 
         <div className="project-container" ref={projectContainerRef}>
-          {charityData.map((project) => (
-            <div className="projects" key={project.index}>
-              <img className="proj-img" src={project.img} alt={`Project ${project.index}`} />
+          {fetchCharityError && <h1>{fetchCharityError}</h1>}
+          {charity.map((project) => (
+            <div className="projects" key={project.id}>
+              <img className="proj-img" src={project.img} alt={`Project ${project.id}`} />
               <p className="card-project-title">{project.title}</p>
               <p className="card-project-description">{project.description}</p>
               <div className="card-custom-progress">
-                <progress value={project.amountReceived} max={project.amountNeeded} />
+                <progress value={project.amountreceived} max={project.amountneeded} />
               </div>
-              <p className="card-current-amount">₵{project.amountReceived}/{project.amountNeeded}</p>
+              <p className="card-current-amount">₵{project.amountreceived}/{project.amountneeded}</p>
             </div>
           ))}
         </div>

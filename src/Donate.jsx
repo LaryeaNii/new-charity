@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PaymentFormModal from './PaymentFormModal';
+import './Donate.css'
 
 const Donate = () => {
 
