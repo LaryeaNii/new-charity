@@ -2,7 +2,7 @@ import './Events.css';
 import supabase from "./config/supabaseclient";
 import { useState, useEffect } from "react";
 
-const Events = ({ eventData }) => {
+const Events = () => {
 
   const [fetchError, setFetchError] = useState(null);
   const [event, setEvent] = useState([]);

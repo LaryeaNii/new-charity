@@ -12,7 +12,6 @@ import Donate from './Donate';
 import Footer from './Footer';
 import BlogReader from './BlogReader';
 import Events from './Events';
-import eventData from './EventData';
 import TestApp from './TestApp';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -34,7 +33,7 @@ function App() {
         <Route path="/test" element={<TestApp/>} />
         <Route path="/team" element={<About/>} />
         <Route path='/donate' element={<Donate/>} />
-        <Route path='/events' element={<Events eventData={eventData}/>} />
+        <Route path='/events' element={<Events/>} />
         <Route path="/blogreader/:blogId" element={<BlogReader />} />
       </Routes>
       <Footer/>
