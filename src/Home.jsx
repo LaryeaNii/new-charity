@@ -9,6 +9,41 @@ import supabase from "./config/supabaseclient";
 
 const Home = () => {
 
+  const quotesArray =['"No one has ever become poor by giving." - Anne Frank',
+  '"We can do no great things, only small things with great love." - Mother Teresa',
+ '"The best way to find yourself is to lose yourself in the service of others." - Mahatma Gandhi',
+  '"We make a living by what we get, but we make a life by what we give." - Winston Churchill',
+  '"We cannot help everyone, but everyone can help someone." - Ronald Reagan',
+  'No one is useless in this world who lightens the burdens of another." - Charles Dickens',
+  '"Remember that the happiest people are not those getting more, but those giving more." - H. Jackson Brown Jr.',
+  '"The heart that gives, gathers." - Lao Tzu',
+  '"To do more for the world than the world does for you—that is success." - Henry Ford',
+  '"The value of a man resides in what he gives and not in what he is capable of receiving." - Albert Einstein',
+  '"The greatest glory in living lies not in never falling, but in rising every time we fall." - Nelson Mandela',
+  '"The way to get started is to quit talking and begin doing." - Walt Disney',
+  '"If you look at what you have in life, you will always have more. If you look at what you do not have in life, you will never have enough." - Oprah Winfrey',
+  '"The best time to plant a tree was 20 years ago. The second best time is now." - Chinese Proverb',
+  '"Do not go where the path may lead, go instead where there is no path and leave a trail." - Ralph Waldo Emerson',
+  '"You have not lived today until you have done something for someone who can never repay you." - John Bunyan'
+  ]
+   
+  const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+
+  
+  useEffect(() => {
+    // Update the current quote index every 5 seconds
+    const interval = setInterval(() => {
+      setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % quotesArray.length);
+    }, 8000);
+
+    return () => {
+      clearInterval(interval); // Clear the interval when the component unmounts
+    };
+  }, []);
+
+  const activeQuote = quotesArray[currentQuoteIndex];
+
+
   const [fetchError, setFetchError] = useState(null);
   const [blogs, setBlogs] = useState([]);
   const [fetchCharityError, setFetchCharityError] = useState(null);
@@ -111,27 +146,9 @@ const Home = () => {
     setIsPaymentModalOpen(!isPaymentModalOpen);
   };
 */} 
-const handlePaymentSubmit = async () => {
-  const sendAmount = donateAmount ; 
-  const mobileNumber = '+233544958246'; 
+const handlePaymentSubmit = () => {
+ 
 
-  try {
-    const response = await fetch('./hubtelRequest', {
-      method: 'POST', // Use POST method
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        mobileNumber: mobileNumber,
-        amount: 10,
-      }),
-    });
-
-    const data = await response.json();
-    console.log(data); 
-  } catch (error) {
-    console.error('Error sending payment:', error);
-  }
 };
 
 
@@ -148,7 +165,7 @@ const handlePaymentSubmit = async () => {
             in communities worldwide.
           </p>
           <div className="additional">
-          <Link to="/donate">
+          <Link to="https://p.hbtl.co/9RhYWd" target="_blank">
               <button>Donate Now</button>
            </Link>
             <img
@@ -163,8 +180,8 @@ const handlePaymentSubmit = async () => {
 
         <div className="donate-card">
           <h2>Donate now!</h2>
-          <p>Donate now to help us make a positive impact in the lives of those in need.</p>
-          <div className="money-grid">
+          <p>{activeQuote}</p>
+         {/*  <div className="money-grid">
             <div className="amount" onClick={() => handleSelectAmount('10')}>₵10</div>
             <div className="amount" onClick={() => handleSelectAmount('25')}>₵25</div>
             <div className="amount" onClick={() => handleSelectAmount('50')}>₵50</div>
@@ -180,11 +197,15 @@ const handlePaymentSubmit = async () => {
               class="donate-input"
               placeholder="₵"
               value={`₵${donateAmount}`}
-            />
-            <button id="short-donate" onClick={handlePaymentSubmit}>Donate Now</button>
+            /> */}
+           <Link to="https://p.hbtl.co/9RhYWd" target="_blank">
+           <button id="short-donate">Donate Now</button>
+           </Link>
+          
           </div>
         </div>
-      </div>
+      
+      
 
       {/*////////////////////////////////////////////// Section 2 ///////////////////////////////////////////////////// */}
       <div className="second">
@@ -262,9 +283,10 @@ const handlePaymentSubmit = async () => {
             with their education
           </p>
           <div className="additional">
-            <Link to="/donate">
+          <Link to="https://p.hbtl.co/9RhYWd" target="_blank">
               <button>Donate Now</button>
-            </Link>
+          </Link>    
+            
           </div>
         </div>
 
@@ -377,7 +399,7 @@ const handlePaymentSubmit = async () => {
             <h1>It takes a small change to make a big difference.</h1>
           </div>
           <div className="plea-button-container">
-            <Link to="./donate">
+          <Link to="https://p.hbtl.co/9RhYWd" target="_blank">
               <button className="plea-donate-button">Donate Now</button>
             </Link>
           </div>

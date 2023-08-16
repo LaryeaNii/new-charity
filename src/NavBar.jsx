@@ -81,7 +81,7 @@ function BasicExample() {
             </NavLink>
           </li>
         </ul>
-        <Link className="donate-link" to="/donate">
+        <Link to="https://p.hbtl.co/9RhYWd" target="_blank">
           <button className="butt">Donate Now 💛</button>
         </Link>
       </div>

@@ -42,11 +42,11 @@
   
   .event-content {
     display: flex;
-    width: calc(100% - 320px); /* To account for the width of the date card */
+   
   }
   
   .event-image-container {
-    width: 400px;
+    width: 500px;
     margin-right: 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -84,10 +84,10 @@
     .event-description {
         flex: 1;
         display: flex;
-        width: 300px;
+        width: 100%;
         flex-direction: column;
         justify-content: center;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+       
       }
   
     .event-content {

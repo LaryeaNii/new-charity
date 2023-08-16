@@ -42,7 +42,7 @@ const Footer = () => {
             
             <div className='request'>
                 <p><b>Be the hero that changes lives</b></p>
-                <Link to="/donate">
+        <Link to="https://p.hbtl.co/9RhYWd" target="_blank">
           <button className="footer-button">Donate Today ↗</button>
         </Link> 
         </div>

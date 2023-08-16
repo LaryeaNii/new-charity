@@ -28,7 +28,7 @@
 .all-blog-card a{
     text-decoration: none;
 }
-@media (max-width: 1500px) {
+@media (max-width: 800px) {
     .all-blog{
         grid-template-columns: 1fr;
     }

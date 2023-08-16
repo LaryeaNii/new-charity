@@ -204,7 +204,9 @@ button{
 .donate-card p{
     font-family: 'Poppins';
     width: 90%;
+    margin-top: 40px;
     padding-left: 40px;
+    font-size: 33px;
 }
 .amount {
     font-family: 'Poppins', sans-serif;
@@ -250,6 +252,13 @@ button{
  
   #short-donate{
     transition: transform 0.3s ease;
+    position: absolute;
+    left: 40px;
+    top: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
   }
   
   #short-donate:hover {
@@ -467,7 +476,460 @@ button{
     display: flex;
     justify-content: center;
 }
+
+
+
 @media (max-width: 1500px) {
+    .first {
+        height: 100vh;
+        background-color: rgb(249, 245, 233);
+    }
+
+    .title {
+        width: 100%;
+        padding: 65px;
+        font-size: 3.4rem;
+    }
+
+    .title h1 {
+        font-family: 'Borel', cursive;
+        font-size: 1.8em;
+        font-weight: 900;
+        text-align: left;
+    }
+
+    .title p {
+        font-family: 'Poppins';
+        font-size: 2.2rem;
+        text-align: left;
+    }
+
+    .additional img {
+        max-width: 60px;
+        margin-right: -10px;
+    }
+
+    .additional {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+        align-items: center;
+        margin-top: 40px;
+        
+    }
+
+    .additional p {
+        margin-top: 15px;
+        font-size: 12px;
+        padding-left: 5px;
+    }
+
+    button {
+        color: white;
+        background-color: rgb(6, 116, 6);
+        border-radius: 20px;
+        border: none;
+        padding: 8px;
+        font-size: 14px;
+        margin-bottom:30px ;
+    }
+
+    .second {
+        background-color: rgb(1, 112, 93);
+        height: 70vh;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 100px;
+        position: relative;
+        padding-right:30px ;
+    }
+
+    .stat-description {
+        display: flex;
+        font-family: 'Poppins';
+        color: white;
+        align-items: center;
+        width: 80%;
+        gap: 10px;
+        font-size: 27px;
+    }
+
+    .enlarge {
+        font-size: 38px;
+    }
+
+    .stat-icon {
+        max-width: 140px;
+    }
+
+    .donate-card {
+        width: 80%;
+        height: auto;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        margin-top: 0px;
+        border-radius: 10px;
+        padding: 20px;
+        right: 0;
+        left: 38px;
+        top: 0px;
+    }
+
+    .donate-card h2 {
+        font-family: 'Borel';
+        font-size: 2.8em;
+        padding: 40px 0 20px 20px;
+        margin-bottom: -20px;
+        margin-left: 40px;
+    }
+
+    .donate-card p{
+        font-family: 'Poppins';
+        width: 90%;
+        margin-top: 20px;
+        padding-left: 40px;
+        font-size: 24px;
+    }
+
+    .amount {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1em;
+        border: 1px solid rgb(232, 232, 232);
+        border-radius: 20px;
+        text-align: center;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .form-container {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .money-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .third {
+        height: auto;
+        background-color: rgb(249, 245, 233);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #mission-title {
+        padding-top: 40px; 
+        font-size: 0.9rem; 
+        width: 100%; 
+    }
+
+    .categories {
+        margin-top: -100px;
+        margin-left: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .mission-category {
+        width: 100%; 
+        height: auto; 
+        padding: 10px;
+         
+    }
+
+    .mission-category:nth-child(3),
+    .mission-category:nth-child(4) {
+        margin-left: 24px;
+    }
+
+    .scroll-section {
+        width: 100%;
+        height: auto; 
+        background-color: white;
+        padding-bottom: 20px; 
+    }
+
+    .project-container {
+        display: flex;
+        width: 100%;
+        padding: 20px; 
+        overflow-x: scroll;
+    }
+
+    .arrows {
+        display: none;
+    }
+
+    .projects {
+        background-color: rgb(249,245,233); 
+        border-radius: 20px;
+        padding: 10px;
+        width: 500px; 
+    }
+
+    .card-project-title {
+        font-family: 'Poppins';
+        padding: 10px;
+        font-weight: 900;
+    }
+
+    .card-project-description {
+        font-family: 'Poppins';
+        padding: 10px;
+        padding-top: 30px;
+    }
+
+    .card-custom-progress {
+        font-family: 'Poppins';
+        padding: 10px;
+        padding-top: 30px;
+    }
+
+    .card-custom-progress progress {
+        appearance: none;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 85px;
+        height: 6px;
+        width: 100%;
+    }
+
+    .card-custom-progress progress::-webkit-progress-value {
+        background-color: rgb(255, 255, 24);
+    }
+
+    .card-custom-progress progress::-moz-progress-bar {
+        background-color: rgb(255, 255, 24);
+    }
+
+    .card-current-amount {
+        padding-top: 45px;
+        padding-left: 130px;
+        margin-bottom: -50px;
+    }
+
+    .flex-text {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        padding: 10px; 
+    }
+
+    .current-project {
+        font-family: 'Borel';
+        font-size: 1.3rem; 
+        padding-top: 20px;
+    }
+
+    .proj-img {
+        width: 260px; 
+        height: 40%; 
+        border-radius: 20px;
+    }
+
+    .volunteer-section {
+        height: auto;
+        background-color: rgb(249, 245, 233);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        width: 100%;
+        padding: 30px;
+    }
+
+    #volunteer-title {
+        padding-top: 60px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: -20px;
+    }
+
+    #volunteer-title button{
+        position: relative;
+        right: 20px;
+    }
+
+    .testimony {
+        padding-bottom: 50px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .testimony-card {
+        width: 100%;
+        height: fit-content;
+        background-color: white;
+        border-radius: 20px;
+        margin: 20px;
+        padding-bottom: 50px;
+    }
+
+    .profile {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    #profile-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .sixth-plea {
+        height: auto;
+        background-color: rgb(249, 245, 233);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plea {
+        width: 100%;
+        height: auto;
+        background-color: rgb(1, 112, 93);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+        margin-bottom: 60px;
+        border-radius: 0;
+    }
+
+    .plea h1 {
+        font-family: 'Borel';
+        color: white;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .plea-donate-button {
+        background-color: #ffc107;
+        color: #fff;
+        font-size: 10px;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 16px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .plea-donate-button:hover {
+        background-color: #ffca28;
+        transform: translateY(-2px);
+    }
+
+    .plea-small-container {
+        width: 100%;
+    }
+
+    .plea-button-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .video-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .video-container {
+        position: relative;
+        max-height:300px; 
+        max-width: 310px; 
+        background-color: #060606;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 5px;
+        right: 18px;
+      }
+
+      .blog-section{
+        height: fit-content;
+        width: fit-content;
+        overflow-x: hidden;
+    }
+
+    #blog-title{
+        display: flex;
+        text-align: center;
+    
+    }
+    .blog-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 0;
+        margin: 0;
+        padding: 10px;
+        padding-bottom: 30px;
+    }
+    .left-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        left: 10px;
+        right: 0;
+        gap: 20px;
+        
+    }
+    .blog-card{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .blog-card img{
+        width: 240px;
+        height: 200px;
+    }
+
+    #short-donate{
+        transition: transform 0.3s ease;
+        position: relative;
+        left: 20px;
+        top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+      }
+      .donate-card{
+        padding-bottom: 60px;
+      }
+      
+}
+
+
+
+
+
+@media (max-width: 700px) {
     .first {
         height: 100vh;
         background-color: rgb(249, 245, 233);
@@ -564,15 +1026,18 @@ button{
 
     .donate-card h2 {
         font-family: 'Borel';
-        font-size: 1.9em;
+        font-size: 1.3em;
         padding: 40px 0 20px 20px;
         margin-bottom: -20px;
+        margin-left: 40px;
     }
 
-    .donate-card p {
+    .donate-card p{
         font-family: 'Poppins';
         width: 90%;
-        padding-left: 20px;
+        margin-top: 20px;
+        padding-left: 40px;
+        font-size: 18px;
     }
 
     .amount {
@@ -887,5 +1352,19 @@ button{
         width: 300px;
         height: 200px;
     }
+
+    #short-donate{
+        transition: transform 0.3s ease;
+        position: relative;
+        left: 20px;
+        top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+      }
+      .donate-card{
+        padding-bottom: 60px;
+      }
       
 }
