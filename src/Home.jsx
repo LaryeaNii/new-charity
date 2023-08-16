@@ -106,26 +106,42 @@ const Home = () => {
     }
   };
 
-  const togglePaymentModal = () => {
+{/*  const togglePaymentModal = () => {
     setIsPaymentModalOpen(!isPaymentModalOpen);
   };
+*/} 
+ 
+const handlePaymentSubmit = async () => {
+  const mobileNumber = '+233544958246'; // Your mobile number
+  const amount = donateAmount; // Use the donateAmount variable
 
-  const handlePaymentSubmit = (paymentDetails) => {
-    // Implement secure payment processing using a payment gateway (e.g., Stripe)
-    // For example:
-    // SomePaymentService.processPayment(paymentDetails)
-    //   .then((response) => {
-    //     console.log('Payment successful:', response);
-    //     // Do something after successful payment
-    //   })
-    //   .catch((error) => {
-    //     console.error('Payment failed:', error);
-    //     // Handle payment failure
-    //   });
+  const clientId = 'gzcfmchn'; // Your client id
+  const clientSecret = 'liaitapi'; // Your client secret
 
-    // For demonstration purposes, we'll log the payment details to the console.
-    console.log('Payment Details:', paymentDetails);
-  };
+  const authHeader = 'Basic ' + Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
+
+  const response = await fetch(
+    `https://devp-reqsendmoney-230622-api.hubtel.com/request-money/${mobileNumber}`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: authHeader
+      },
+      body: JSON.stringify({
+        amount: amount,
+        title: 'charity', // Set the title to 'charity'
+        description: 'thank you for paying', // Set the description
+        clientReference: 'string', // You can set a reference if needed
+      })
+    }
+  );
+
+  const data = await response.json();
+  console.log(data); // Log the response from the API
+};
+
+
 
   return (
     <div>
@@ -173,7 +189,7 @@ const Home = () => {
               placeholder="₵"
               value={`₵${donateAmount}`}
             />
-            <button id="short-donate" onClick={togglePaymentModal}>Donate Now</button>
+            <button id="short-donate" onClick={handlePaymentSubmit}>Donate Now</button>
           </div>
         </div>
       </div>
@@ -394,13 +410,16 @@ const Home = () => {
           </div>
         </div>
       )}
+     
+      {/*
       {isPaymentModalOpen && (
         <PaymentFormModal
           donateAmount={donateAmount}
           onClose={togglePaymentModal}
           onSubmit={handlePaymentSubmit}
         />
-      )}
+      )} 
+      */}
 
     </div>
   );
