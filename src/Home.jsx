@@ -111,23 +111,29 @@ const Home = () => {
     setIsPaymentModalOpen(!isPaymentModalOpen);
   };
 */} 
- 
 const handlePaymentSubmit = async () => {
-  const donateAmount = 100; 
-  const mobileNumber = '+233544958246'; 
+  const donateAmount = 100; // Replace with the actual donation amount
+  const mobileNumber = '+233544958246'; // Your mobile number
 
   try {
-    const response = await fetch('./hubtelRequest?mobileNumber=' + encodeURIComponent(mobileNumber) + '&amount=' + donateAmount, {
-      method: 'GET',
+    const response = await fetch('/.netlify/functions/hubtelRequest', {
+      method: 'POST', // Use POST method
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        mobileNumber: mobileNumber,
+        amount: donateAmount,
+      }),
     });
 
     const data = await response.json();
-    console.log(data); 
+    console.log(data); // Log the response from the serverless function
   } catch (error) {
     console.error('Error sending payment:', error);
   }
-   
 };
+
 
 
 
