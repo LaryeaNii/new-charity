@@ -984,13 +984,13 @@ button{
 
     .second {
         background-color: rgb(1, 112, 93);
-        height: 60vh;
+        height: 55vh;
     }
 
     .stats {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding-top: 15px;
+        padding-top: 0;
         position: relative;
         padding-right:30px ;
     }
@@ -1002,7 +1002,7 @@ button{
         align-items: center;
         width: 80%;
         gap: 10px;
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .enlarge {
