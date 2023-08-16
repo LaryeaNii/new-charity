@@ -8,6 +8,17 @@ function BasicExample() {
   const navRef = useRef(null);
   const checkboxRef = useRef(null);
 
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+    checkboxRef.current.checked = !menuOpen; // Update the checkbox state
+  };
+
+  const handleMenuItemClick = () => {
+    setMenuOpen(false); // Close the menu when a menu item is clicked
+    checkboxRef.current.checked = false; // Uncheck the checkbox
+  };
+
+
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (menuOpen && navRef.current && !navRef.current.contains(event.target)) {
@@ -41,42 +52,42 @@ function BasicExample() {
         </label>
         <ul className="main-nav">
           <li>
-            <NavLink exact to="/" className="nav-link" activeClassName="active">
+            <NavLink exact to="/" className="nav-link" activeClassName="active" onClick={handleMenuItemClick}>
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" className="nav-link" activeClassName="active">
+            <NavLink to="/about" className="nav-link" activeClassName="active" onClick={handleMenuItemClick}>
               About
             </NavLink>
           </li>
           <li>
-            <NavLink to="/blogs" className="nav-link" activeClassName="active">
+            <NavLink to="/blogs" className="nav-link" activeClassName="active" onClick={handleMenuItemClick}>
               Blogs
             </NavLink>
           </li>
           <li>
-            <NavLink to="/gallery" className="nav-link" activeClassName="active">
+            <NavLink to="/gallery" className="nav-link" activeClassName="active"onClick={handleMenuItemClick}>
               Gallery
             </NavLink>
           </li>
           <li>
-            <NavLink to="/events" className="nav-link" activeClassName="active">
+            <NavLink to="/events" className="nav-link" activeClassName="active" onClick={handleMenuItemClick}>
               Events
             </NavLink>
           </li>
           <li>
-            <NavLink to="/volunteer" className="nav-link" activeClassName="active">
+            <NavLink to="/volunteer" className="nav-link" activeClassName="active" onClick={handleMenuItemClick}>
               Volunteer
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" className="nav-link" activeClassName="active">
+            <NavLink to="/contact" className="nav-link" activeClassName="active" onClick={handleMenuItemClick}>
               Contact
             </NavLink>
           </li>
           <li>
-            <NavLink to="/donate" className="nav-link" id="donate-special" activeClassName="active">
+            <NavLink to="https://p.hbtl.co/9RhYWd" className="nav-link" id="donate-special" activeClassName="active" onClick={handleMenuItemClick}>
               Donate
             </NavLink>
           </li>
