@@ -118,27 +118,31 @@ const handlePaymentSubmit = async () => {
   const clientId = 'gzcfmchn'; // Your client id
   const clientSecret = 'liaitapi'; // Your client secret
 
-  const authHeader = 'Basic ' + Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
+  const authHeader = 'Basic ' + btoa(`${clientId}:${clientSecret}`);
 
-  const response = await fetch(
-    `https://devp-reqsendmoney-230622-api.hubtel.com/request-money/${mobileNumber}`,
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: authHeader
-      },
-      body: JSON.stringify({
-        amount: amount,
-        title: 'charity', // Set the title to 'charity'
-        description: 'thank you for paying', // Set the description
-        clientReference: 'string', // You can set a reference if needed
-      })
-    }
-  );
+  try {
+    const response = await fetch(
+      `https://devp-reqsendmoney-230622-api.hubtel.com/request-money/${mobileNumber}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: authHeader
+        },
+        body: JSON.stringify({
+          amount: amount,
+          title: 'charity', // Set the title to 'charity'
+          description: 'thank you for paying', // Set the description
+          clientReference: 'string', // You can set a reference if needed
+        })
+      }
+    );
 
-  const data = await response.json();
-  console.log(data); // Log the response from the API
+    const data = await response.json();
+    console.log(data); // Log the response from the API
+  } catch (error) {
+    console.error('Error sending payment:', error);
+  }
 };
 
 
