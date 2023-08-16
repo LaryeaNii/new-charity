@@ -6,6 +6,7 @@ import supabase from "./config/supabaseclient";
 
 
 
+
 const Home = () => {
 
   const [fetchError, setFetchError] = useState(null);
@@ -112,39 +113,20 @@ const Home = () => {
 */} 
  
 const handlePaymentSubmit = async () => {
-  const mobileNumber = '+233544958246'; // Your mobile number
-  const amount = donateAmount; // Use the donateAmount variable
-  const clientId = 'gzcfmchn'; // Your client id
-  const clientSecret = 'liaitapi'; // Your client secret
-  const callbackUrl = 'https://zionfoundation.netlify.app'; // Your application's callback URL
-
-  const authHeader = 'Basic ' + btoa(`${clientId}:${clientSecret}`);
+  const donateAmount = 100; 
+  const mobileNumber = '+233544958246'; 
 
   try {
-    const response = await fetch(
-      `https://devp-reqsendmoney-230622-api.hubtel.com/request-money/bulk`,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: authHeader,
-        },
-        body: JSON.stringify({
-          amount: amount,
-          title: 'charity', // Set the title
-          description: 'thank you for paying', // Set the description
-          clientReference: 'string', // Set your reference if needed
-          callbackUrl: callbackUrl, // Set the callback URL
-          audience: [mobileNumber], // Set the audience to your phone number
-        }),
-      }
-    );
+    const response = await fetch('./hubtelRequest?mobileNumber=' + encodeURIComponent(mobileNumber) + '&amount=' + donateAmount, {
+      method: 'GET',
+    });
 
     const data = await response.json();
-    console.log(data); // Log the response from the API
+    console.log(data); 
   } catch (error) {
     console.error('Error sending payment:', error);
   }
+   
 };
 
 
