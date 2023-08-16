@@ -113,7 +113,7 @@ const Home = () => {
  
 const handlePaymentSubmit = async () => {
   const mobileNumber = '+233544958246'; // Your mobile number
-  const amount = donateAmount; // Use the donateAmount variable
+  const amount = 10; // Use the donateAmount variable
 
   const clientId = 'gzcfmchn'; // Your client id
   const clientSecret = 'liaitapi'; // Your client secret
