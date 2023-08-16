@@ -119,6 +119,7 @@ const handlePaymentSubmit = async () => {
   const clientSecret = 'liaitapi'; // Your client secret
 
   const authHeader = 'Basic ' + btoa(`${clientId}:${clientSecret}`);
+  const callbackUrl = 'https://zionfoundation.netlify.app/payment-callback';
 
   try {
     const response = await fetch(
@@ -134,6 +135,7 @@ const handlePaymentSubmit = async () => {
           title: 'charity', // Set the title to 'charity'
           description: 'thank you for paying', // Set the description
           clientReference: 'string', // You can set a reference if needed
+          callbackUrl: callbackUrl
         })
       }
     );
