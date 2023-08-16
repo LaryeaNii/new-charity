@@ -159,6 +159,7 @@ button{
     border: none;
     padding: 10px;
     font-size: 15px;
+    
 }
 .second{
     background-color: rgb(1,112,93);
@@ -252,13 +253,16 @@ button{
  
   #short-donate{
     transition: transform 0.3s ease;
-    position: absolute;
+    position: relative;
     left: 40px;
-    top: 500px;
+    top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 400px;
+  }
+  a{
+    text-decoration: none;
   }
   
   #short-donate:hover {
