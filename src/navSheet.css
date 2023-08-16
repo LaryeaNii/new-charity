@@ -93,7 +93,7 @@
 
 @media (max-width: 1024px) {
   .hope {
-    padding-right: 40px;
+    padding-right: 0;
     padding-left: 50px;
   }
 
