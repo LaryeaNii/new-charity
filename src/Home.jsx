@@ -147,6 +147,7 @@ const Home = () => {
               src="./play-circle-svgrepo-com.svg"
               alt="play"
               onClick={toggleVideoModal}
+              className='play-button'
             />
             <p style={{ fontWeight: 'bold' }}>Watch Video</p>
           </div>

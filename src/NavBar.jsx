@@ -1,35 +1,91 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom'; 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import {useState, useEffect, useRef} from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import './navSheet.css';
 
 function BasicExample() {
+  
+  const [menuOpen, setMenuOpen] = useState(false);
+  const navRef = useRef(null);
+  const checkboxRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (menuOpen && navRef.current && !navRef.current.contains(event.target)) {
+        setMenuOpen(false);
+        checkboxRef.current.checked = false; 
+      }
+    };
+
+    document.addEventListener('click', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, [menuOpen]);
+
   return (
-    <Navbar expand="lg" className='myNavBar sticky-top'>
-      <Container className='hope'>
-        <Navbar.Brand as={Link} to="/" id='special-logo'>
-          <img src="./charity-svgrepo-com.svg" alt="logo" className='logo' />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <NavLink to="/" className='main-nav'>Home</NavLink>
-            <NavLink to="/about" className='main-nav' >About</NavLink>
-            <NavLink to="/blogs"className='main-nav'>Blogs</NavLink>
-            <NavLink to="/gallery"className='main-nav'>Gallery</NavLink>
-            <NavLink to="/events"className='main-nav'>Events</NavLink>
-            <NavLink to="/volunteer" className='main-nav'>Volunteer</NavLink>
-            <NavLink to="/contact" className='main-nav'>Contact</NavLink>
-            <NavLink to="/donate" id='donate-special' className='main-nav'>Donate</NavLink>
-          </Nav>
-        </Navbar.Collapse>
-        <Link className='donate-link' to="/donate"> 
-          <button className='butt'>Donate Now 💛</button>
+    <nav className={`myNavBar ${menuOpen ? 'open' : ''}`} ref={navRef}>
+      <div className="container hope">
+        <Link to="/" className="logo-link">
+          <img src="./charity-svgrepo-com.svg" alt="logo" className="logo" />
         </Link>
-      </Container>
-    </Navbar>
+        <input
+          type="checkbox"
+          id="navbar-toggle"
+          className="navbar-toggle"
+          ref={checkboxRef}
+          onClick={() => setMenuOpen(!menuOpen)} 
+        />
+        <label htmlFor="navbar-toggle" className="navbar-toggle-label">
+          &#9776;
+        </label>
+        <ul className="main-nav">
+          <li>
+            <NavLink exact to="/" className="nav-link" activeClassName="active">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" className="nav-link" activeClassName="active">
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/blogs" className="nav-link" activeClassName="active">
+              Blogs
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/gallery" className="nav-link" activeClassName="active">
+              Gallery
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/events" className="nav-link" activeClassName="active">
+              Events
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/volunteer" className="nav-link" activeClassName="active">
+              Volunteer
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className="nav-link" activeClassName="active">
+              Contact
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/donate" className="nav-link" id="donate-special" activeClassName="active">
+              Donate
+            </NavLink>
+          </li>
+        </ul>
+        <Link className="donate-link" to="/donate">
+          <button className="butt">Donate Now 💛</button>
+        </Link>
+      </div>
+    </nav>
   );
 }
 

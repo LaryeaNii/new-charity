@@ -18,18 +18,8 @@ const Donate = () => {
       
   const handlePaymentSubmit = (paymentDetails) => {
     // Implement secure payment processing using a payment gateway (e.g., Stripe)
-    // For example:
-    // SomePaymentService.processPayment(paymentDetails)
-    //   .then((response) => {
-    //     console.log('Payment successful:', response);
-    //     // Do something after successful payment
-    //   })
-    //   .catch((error) => {
-    //     console.error('Payment failed:', error);
-    //     // Handle payment failure
-    //   });
-
-    // For demonstration purposes, we'll log the payment details to the console.
+    
+    
     console.log('Payment Details:', paymentDetails);
   };
 
