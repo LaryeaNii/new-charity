@@ -990,7 +990,7 @@ button{
     .stats {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding-top: 10px;
+        padding-top: 35px;
         position: relative;
         padding-right:30px ;
     }
@@ -1010,7 +1010,7 @@ button{
     }
 
     .stat-icon {
-        max-width: 40px;
+        max-width: 80px;
     }
 
     .donate-card {
@@ -1024,14 +1024,15 @@ button{
         right: 0;
         left: 38px;
         top: 0px;
+    
     }
 
     .donate-card h2 {
         font-family: 'Borel';
-        font-size: 1.3em;
+        font-size: 1.8em;
         padding: 40px 0 20px 20px;
         margin-bottom: -20px;
-        margin-left: 40px;
+        margin-left: 20px;
     }
 
     .donate-card p{
@@ -1039,7 +1040,7 @@ button{
         width: 90%;
         margin-top: 20px;
         padding-left: 40px;
-        font-size: 18px;
+        font-size: 1.3rem;
     }
 
     .amount {
