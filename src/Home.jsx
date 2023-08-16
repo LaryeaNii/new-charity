@@ -112,30 +112,27 @@ const Home = () => {
   };
 */} 
 const handlePaymentSubmit = async () => {
-  const donateAmount = 100; // Replace with the actual donation amount
-  const mobileNumber = '+233544958246'; // Your mobile number
+  const sendAmount = donateAmount ; 
+  const mobileNumber = '+233544958246'; 
 
   try {
-    const response = await fetch('/.netlify/functions/hubtelRequest', {
+    const response = await fetch('./hubtelRequest', {
       method: 'POST', // Use POST method
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         mobileNumber: mobileNumber,
-        amount: donateAmount,
+        amount: 10,
       }),
     });
 
     const data = await response.json();
-    console.log(data); // Log the response from the serverless function
+    console.log(data); 
   } catch (error) {
     console.error('Error sending payment:', error);
   }
 };
-
-
-
 
 
   return (
