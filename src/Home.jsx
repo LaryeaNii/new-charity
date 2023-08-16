@@ -113,30 +113,30 @@ const Home = () => {
  
 const handlePaymentSubmit = async () => {
   const mobileNumber = '+233544958246'; // Your mobile number
-  const amount = 10; // Use the donateAmount variable
-
+  const amount = donateAmount; // Use the donateAmount variable
   const clientId = 'gzcfmchn'; // Your client id
   const clientSecret = 'liaitapi'; // Your client secret
+  const callbackUrl = 'https://zionfoundation.netlify.app'; // Your application's callback URL
 
   const authHeader = 'Basic ' + btoa(`${clientId}:${clientSecret}`);
-  const callbackUrl = 'https://zionfoundation.netlify.app/payment-callback';
 
   try {
     const response = await fetch(
-      `https://devp-reqsendmoney-230622-api.hubtel.com/request-money/${mobileNumber}`,
+      `https://devp-reqsendmoney-230622-api.hubtel.com/request-money/bulk`,
       {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: authHeader
+          Authorization: authHeader,
         },
         body: JSON.stringify({
           amount: amount,
-          title: 'charity', // Set the title to 'charity'
+          title: 'charity', // Set the title
           description: 'thank you for paying', // Set the description
-          clientReference: 'string', // You can set a reference if needed
-          callbackUrl: callbackUrl
-        })
+          clientReference: 'string', // Set your reference if needed
+          callbackUrl: callbackUrl, // Set the callback URL
+          audience: [mobileNumber], // Set the audience to your phone number
+        }),
       }
     );
 
@@ -146,6 +146,7 @@ const handlePaymentSubmit = async () => {
     console.error('Error sending payment:', error);
   }
 };
+
 
 
 
