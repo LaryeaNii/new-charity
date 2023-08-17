@@ -548,7 +548,7 @@ button{
     .stats {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding-top: 100px;
+        padding-top: 10px;
         position: relative;
         padding-right:30px ;
     }
@@ -984,25 +984,31 @@ button{
 
     .second {
         background-color: rgb(1, 112, 93);
-        height: 55vh;
+        height: 100vh;
     }
 
     .stats {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding-top: 0;
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+        margin-left: 0;
+        width: 70%;
+        gap: 30px;
         position: relative;
-        padding-right:30px ;
+        left: 20%;
     }
 
     .stat-description {
+        padding-top: 5px;
         display: flex;
         font-family: 'Poppins';
         color: white;
         align-items: center;
-        width: 80%;
-        gap: 10px;
-        font-size: 10px;
+        width: 100%;
+        gap: 30px;
+        font-size: 20px;
     }
 
     .enlarge {
@@ -1038,9 +1044,9 @@ button{
     .donate-card p{
         font-family: 'Poppins';
         width: 90%;
-        margin-top: 20px;
+        margin-top: 10px;
         padding-left: 40px;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .amount {
