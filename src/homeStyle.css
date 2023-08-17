@@ -1021,7 +1021,7 @@ button{
 
     .donate-card {
         width: 80%;
-        height: auto;
+        height: 60%;
         background-color: rgb(255, 255, 255);
         position: relative;
         margin-top: 0px;
@@ -1036,7 +1036,7 @@ button{
     .donate-card h2 {
         font-family: 'Borel';
         font-size: 1.8em;
-        padding: 40px 0 20px 20px;
+        padding: 29px 10px 10px 4px;
         margin-bottom: -20px;
         margin-left: 20px;
     }
@@ -1044,8 +1044,8 @@ button{
     .donate-card p{
         font-family: 'Poppins';
         width: 90%;
-        margin-top: 10px;
-        padding-left: 40px;
+        margin-top: 40px;
+        padding-left: 20px;
         font-size: 1.1rem;
     }
 
@@ -1364,9 +1364,9 @@ button{
 
     #short-donate{
         transition: transform 0.3s ease;
-        position: relative;
-        left: 20px;
-        top: 20px;
+        position: absolute;
+        left: 40px;
+        top: 340px;
         display: flex;
         justify-content: center;
         align-items: center;
