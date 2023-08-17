@@ -34,7 +34,7 @@ const Home = () => {
     // Update the current quote index every 5 seconds
     const interval = setInterval(() => {
       setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % quotesArray.length);
-    }, 100000);
+    }, 10000);
 
     return () => {
       clearInterval(interval); // Clear the interval when the component unmounts
