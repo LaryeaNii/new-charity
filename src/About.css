@@ -165,19 +165,23 @@
     
    
 .pic1{
-    max-width: 270px;
+    width: 330px;
+    padding: 0;
 }
 .founder-container{
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    padding: 0;
     
 }
 .founder-container p{
     width: 70%;
     font-size: 0.9rem;
-    padding: 4px;
+    padding-top: 9px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 #founder2{
@@ -188,7 +192,6 @@
     color: white;
 }
 #founders{
-  
   padding: 0;
 }
 
