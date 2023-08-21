@@ -68,6 +68,27 @@
     flex-wrap: wrap;
     gap: 30px;
 }
+.pic1{
+    max-width: 400px;
+}
+.founder-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.founder-container p{
+    width: 70%;
+    font-size: 1.4rem;
+    padding: 20px;
+}
+
+#founder2{
+    background-color: rgb(249, 245, 233);
+}
+#founder1{
+    background-color: rgb(2, 32, 9);
+    color: white;
+}
 
 @media (max-width: 1500px) {
     .about-section{

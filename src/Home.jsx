@@ -146,10 +146,12 @@ const Home = () => {
     setIsPaymentModalOpen(!isPaymentModalOpen);
   };
 */} 
-const handlePaymentSubmit = () => {
- 
 
+const handleDonation = async () => {
+  
+  {/*ong */}
 };
+
 
 
   return (
@@ -167,7 +169,7 @@ const handlePaymentSubmit = () => {
           <div className="additional">
           <Link to="https://p.hbtl.co/9RhYWd" target="_blank">
               <button>Donate Now</button>
-           </Link>
+          </Link>
             <img
               src="./play-circle-svgrepo-com.svg"
               alt="play"
@@ -198,7 +200,7 @@ const handlePaymentSubmit = () => {
               placeholder="₵"
               value={`₵${donateAmount}`}
             /> */}
-           <Link to="https://p.hbtl.co/9RhYWd" target="_blank">
+            <Link to="https://p.hbtl.co/9RhYWd" target="_blank">
            <button id="short-donate">Donate Now</button>
            </Link>
           

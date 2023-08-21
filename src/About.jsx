@@ -51,6 +51,23 @@ const About = () => {
               </div>
         </div>
        </div>
+       <div className='bottom-section' id='founders'>
+              <h2>A Word From Our Founders</h2>
+              <div className='founder-container' id='founder1'>
+                  <img src="./profile1.jpg" alt="founder1" className='pic1' />
+                  <p>The journey that has brought us here has been one of compassion, 
+                    determination, and boundless ambition. The Zion Foundation is not just an organization; 
+                    it's a movement that seeks to redefine what's possible. It's about nurturing the potential within every 
+                    individual, regardless of their circumstances, and fostering a world where every voice is heard and valued.</p>
+              </div>
+              <div className='founder-container' id='founder2'>
+                   <p>The seeds of Zion were sown in a belief that together, we can forge a brighter future. Our foundation is built upon the principles of compassion,
+                     innovation, and empowerment. We recognize that the challenges we face are substantial, but they are not insurmountable. We are driven by an unyielding
+                     determination to stand up against adversity, to extend a helping hand to those in need, and to be a beacon of hope for communities around the globe.
+                     </p>
+                    <img src="./profile2.jpg" alt="founder2" className='pic1'/>
+              </div>
+       </div>
        <div className="bottom-section">
           <h2>Meet Our Leaders</h2>
           <div className="all-team">
