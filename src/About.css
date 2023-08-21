@@ -163,7 +163,29 @@
         gap: 30px;
     }
     
+   
+.pic1{
+    max-width: 200px;
+}
+.founder-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.founder-container p{
+    width: 70%;
+    font-size: 0.6rem;
+    padding: 4px;
+}
 
+#founder2{
+    background-color: rgb(249, 245, 233);
+}
+#founder1{
+    background-color: rgb(2, 32, 9);
+    color: white;
+}
 
 
 
