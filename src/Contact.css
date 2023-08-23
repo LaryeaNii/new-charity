@@ -1,206 +1,229 @@
-.detail-item-section img{
-    max-width: 110px;
+.detail-item-section img {
+  max-width: 70px;
 }
-.contact-title-title{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 30px;
+.contact-title-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 30px;
 }
-.contact-title{
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-    flex-direction: column;
-    align-items: center;
+.contact-title {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  flex-direction: column;
+  align-items: center;
 }
-.details-container{
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
+.details-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 30px;
 }
-.detail-item-section{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.detail-item-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.bottom-contact-section{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  
+.bottom-contact-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
-.contact-form{
-    background-color: rgb(223, 223, 223);
-    display: flex;
-    flex-direction: column;
-    padding: 80px;
-    justify-content: center;
-    color: black;
-    max-width: 600px;
+.contact-form {
+  background-color: rgb(223, 223, 223);
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  justify-content: center;
+  color: black;
+  max-width: 600px;
 }
-textarea{
-    padding: 20px;
+textarea {
+  padding: 20px;
 }
-.form{
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
 }
-.form-title{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
+.form-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
 }
-.input-container{
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+.input-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
 }
 
-.form-button{
-    background-color: black;
-    color: white;
+.form-button {
+  background-color: black;
+  color: white;
 }
-button:hover{
-    background-color: white;
-    color: black;
+button:hover {
+  background-color: white;
+  color: black;
 }
 /* ... Your existing CSS rules ... */
 
 /* Styling for FAQ Section */
 .faq-section {
-    margin-top: 40px;
-  }
-  
-  .faq-title {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .faq-item {
-    background-color: #f7f7f7;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .faq-item h3 {
-    margin: 0;
-  }
-  
-  .faq-item p {
-    display: none;
-    margin-top: 10px;
-  }
-  
-  .faq-item.active {
-    background-color: #e2e2e2;
-  }
-  
-  .faq-item.active p {
-    display: block;
-  }
-  
+  margin-top: 40px;
+}
 
+.faq-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-column-gap: 1rem;
+}
+
+.faq-item {
+  background-color: #f7f7f7;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.faq-item h3 {
+  margin: 0;
+}
+
+.faq-item p {
+  display: none;
+  margin-top: 10px;
+}
+
+.faq-item.active {
+  background-color: #e2e2e2;
+}
+
+.faq-item.active p {
+  display: block;
+}
 
 @media (max-width: 1500px) {
-    .detail-item-section img{
-        max-width: 70px;
-    }
-   
-    .contact-title-title{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        padding: 20px;
-    }
-    .contact-title{
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-        flex-direction: column;
-        align-items: center;
-    }
-    .contact-title p{
-        width: 90%;
-        text-align: center;
-    }
-    .details-container{
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        flex-direction: column;
-        width: 90%;
-        gap: 30px;
-        padding-bottom: 50px;
-    }
-    .detail-item-section{
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-    }
-    .detail-item-section p{
-        width: 50%;
-    }
+  .detail-item-section img {
+    max-width: 50px;
+  }
 
-    .bottom-contact-section{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-      
+  .contact-title-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+  }
+  .contact-title {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-title p {
+    width: 90%;
+    text-align: center;
+  }
+  .details-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+
+  .detail-item-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  .detail-item-section p {
+    width: 50%;
+  }
+
+  .bottom-contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .contact-form {
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    justify-content: center;
+    color: black;
+    width: 90%;
+  }
+  textarea {
+    padding: 20px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .form-title p {
+    width: 90%;
+  }
+  .input-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .form-button {
+    background-color: black;
+    color: white;
+  }
+  button:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+@media (min-width: 1500px) {
+    .faq-list {
+        margin: 0 10%;
     }
-    .contact-form{
-        background-color: rgb(223, 223, 223);
-        display: flex;
-        flex-direction: column;
-        padding: 6px;
-        justify-content: center;
-        color: black;
-        width: 90%;
-    }
-    textarea{
-        padding: 20px;
-    }
-    .form{
-        display: flex;
-        flex-direction: column;
-    }
-    .form-title{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        text-align: center;
-        padding-top: 20px;
-    }
-    .form-title p{
-        width: 90%;
-    }
-    .input-container{
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 30px;
-    }
-    
-    .form-button{
-        background-color: black;
-        color: white;
-    }
-    button:hover{
-        background-color: white;
-        color: black;
-    } 
+}
+
+@media (width <= 800px) {
+  .details-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 30px;
+    padding-bottom: 50px;
+  }
 }
