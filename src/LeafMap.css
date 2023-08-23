@@ -1,16 +1,15 @@
 
 .leaflet-map {
     width: 600px;
-    height: 800px;
-  
-    
+    height: 900px;
+
+
   }
-  
+
   @media (max-width: 1000px) {
     .leaflet-map {
       width: 300px;
       height: 300px;
-     
+
     }
   }
-  
