@@ -151,13 +151,10 @@
       
       
       .box {
-        
+        flex: 5;
         transition: flex 0.3s ease-in-out;
         background-size: cover;
         background-repeat: no-repeat;
-        width: 100vw; 
-        height: 100vh;
-        position: relative;
       }
       
       .box:hover {
