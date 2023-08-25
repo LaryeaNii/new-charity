@@ -35,11 +35,7 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-/* Gallery.css */
 
-/* Your existing styles for the gallery go here */
-
-/* Modal styles */
 .modal-overlay {
     position: fixed;
     top: 50px;
@@ -80,3 +76,88 @@
     cursor: pointer;
   }
   
+  .squeeze-container {
+    display: flex;
+    height: 80vh;
+  }
+  
+  
+  .box {
+    flex: 1;
+    transition: flex 0.5s ease-in-out;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .box:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+  }
+  
+  .overlay p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  #one {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/charity-project-395321.appspot.com/o/IMG-20220808-WA0028(1).jpg?alt=media&token=02fa69ce-a5d2-4f43-9b76-96e24d7dcd9f');
+  }
+  
+  #two {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/charity-project-395321.appspot.com/o/ankaful_42.jpg?alt=media&token=7fc0808f-c190-4480-b3a1-1b38cdfbc130');
+  }
+  
+  #three {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/charity-project-395321.appspot.com/o/IMG_3260.jpg?alt=media&token=1b6e0720-2670-4a41-aa45-0d5a28d05669');
+  }
+  
+  #four {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/charity-project-395321.appspot.com/o/IMG_8794.jpg?alt=media&token=99983bb8-7c0a-488a-9f91-a0a687bd5f88');
+  }
+  
+  #five {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/charity-project-395321.appspot.com/o/IMG_8705.jpg?alt=media&token=e9cb90f6-eede-4134-8fb6-b0680a2ebc1a'  );
+    
+}
+  
+  .box:hover {
+    flex: 3;
+  }
+
+
+  
+  @media (max-width: 768px) {
+    .squeeze-container {
+        display: flex;
+        overflow-x: hidden;
+        height: 60vh;
+      }
+      
+      
+      .box {
+        flex: 1;
+        transition: flex 0.3s ease-in-out;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      
+      .box:hover {
+        flex: 16;
+      }
+
+  }

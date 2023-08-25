@@ -38,7 +38,7 @@ function BasicExample() {
     <nav className={`myNavBar ${menuOpen ? 'open' : ''}`} ref={navRef}>
       <div className="container hope">
         <Link to="/" className="logo-link">
-          <img src="./charity-svgrepo-com.svg" alt="logo" className="logo" />
+          <img src="/logo.png" alt="logo" className="logo" />
         </Link>
         <input
           type="checkbox"
@@ -52,42 +52,42 @@ function BasicExample() {
         </label>
         <ul className="main-nav">
           <li>
-            <NavLink exact to="/" className="nav-link" activeClassName="active" onClick={handleMenuItemClick}>
+            <NavLink exact to="/" className="nav-link" activeclassname="active" onClick={handleMenuItemClick}>
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" className="nav-link" activeClassName="active" onClick={handleMenuItemClick}>
+            <NavLink to="/about" className="nav-link" activeclassname="active" onClick={handleMenuItemClick}>
               About
             </NavLink>
           </li>
           <li>
-            <NavLink to="/blogs" className="nav-link" activeClassName="active" onClick={handleMenuItemClick}>
+            <NavLink to="/blogs" className="nav-link" activeclassname="active" onClick={handleMenuItemClick}>
               Blogs
             </NavLink>
           </li>
           <li>
-            <NavLink to="/gallery" className="nav-link" activeClassName="active"onClick={handleMenuItemClick}>
+            <NavLink to="/gallery" className="nav-link" activeclassname="active"onClick={handleMenuItemClick}>
               Gallery
             </NavLink>
           </li>
           <li>
-            <NavLink to="/events" className="nav-link" activeClassName="active" onClick={handleMenuItemClick}>
+            <NavLink to="/events" className="nav-link" activeclassname="active" onClick={handleMenuItemClick}>
               Events
             </NavLink>
           </li>
           <li>
-            <NavLink to="/volunteer" className="nav-link" activeClassName="active" onClick={handleMenuItemClick}>
+            <NavLink to="/volunteer" className="nav-link" activeclassname="active" onClick={handleMenuItemClick}>
               Volunteer
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" className="nav-link" activeClassName="active" onClick={handleMenuItemClick}>
+            <NavLink to="/contact" className="nav-link" activeclassname="active" onClick={handleMenuItemClick}>
               Contact
             </NavLink>
           </li>
           <li>
-            <NavLink to="https://p.hbtl.co/9RhYWd" className="nav-link" id="donate-special" activeClassName="active" onClick={handleMenuItemClick}>
+            <NavLink to="https://p.hbtl.co/9RhYWd" className="nav-link" id="donate-special" activeclassname="active" onClick={handleMenuItemClick}>
               Donate
             </NavLink>
           </li>

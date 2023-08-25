@@ -12,7 +12,13 @@ import Donate from './Donate';
 import Footer from './Footer';
 import BlogReader from './BlogReader';
 import Events from './Events';
+import AboadakaPics from './AboadakaPics';
+import Anniversary from './Anniversary';
+import Prison from './prison';
 import TestApp from './TestApp';
+import Psych from './Pysch';
+import GirlChild from './GirlChild';
+import Tour from './Tour';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -34,6 +40,12 @@ function App() {
         <Route path="/team" element={<About/>} />
         <Route path='/donate' element={<Donate/>} />
         <Route path='/events' element={<Events/>} />
+        <Route path="/aboadaka" element={<AboadakaPics/>} />
+        <Route path="/anniversary" element={<Anniversary/>} />
+        <Route path="/prison" element={<Prison/>} />
+        <Route path="/psych" element={<Psych/>} />
+        <Route path="/girlchild" element={<GirlChild/>} />
+        <Route path="/tour" element={<Tour/>} />
         <Route path="/blogreader/:blogId" element={<BlogReader />} />
       </Routes>
       <Footer/>
