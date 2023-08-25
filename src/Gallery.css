@@ -144,16 +144,20 @@
   @media (max-width: 768px) {
     .squeeze-container {
         display: flex;
+        flex-direction: column;
         overflow-x: hidden;
-        height: 60vh;
+        height: 100vh;
       }
       
       
       .box {
-        flex: 1;
+        
         transition: flex 0.3s ease-in-out;
         background-size: cover;
         background-repeat: no-repeat;
+        width: 100vw; 
+        height: 100vh;
+        position: relative;
       }
       
       .box:hover {
