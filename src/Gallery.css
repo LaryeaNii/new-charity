@@ -158,7 +158,8 @@
       }
       
       .box:hover {
-        flex: 16;
+        flex: 10;
       }
+      
 
   }
