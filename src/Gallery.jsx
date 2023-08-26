@@ -42,14 +42,24 @@ const Gallery = () => {
           </Link>
           
         </div>
+
         <div className="box" id="five">
           <Link to='/anniversary'>
+          <div className="overlay">
+            <p>Celebrating Our Third Anniversary</p>
+          </div>
+          </Link>
+        </div>
+
+        <div className="box" id="six">
+          <Link to='/more'>
           <div className="overlay">
             <p>More From Zion Helping Hand Foundation</p>
           </div>
           </Link>
-    
         </div>
+
+
       </div>
     </div>
   );

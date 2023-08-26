@@ -12,6 +12,7 @@
     width: 300px;
     height: 250px;
     border-radius: 20px;
+    object-fit: contain;
 }
 .gallery-item p {
     width: 300px;
@@ -28,7 +29,7 @@
 
 
 .gallery-item{
-    padding: 20px;
+    padding: 10px;
 }
 .gallery-container{
     display: flex;
@@ -130,9 +131,14 @@
     background-image: url('https://firebasestorage.googleapis.com/v0/b/charity-project-395321.appspot.com/o/IMG_8794.jpg?alt=media&token=99983bb8-7c0a-488a-9f91-a0a687bd5f88');
   }
   
-  #five {
+  #six {
     background-image: url('https://firebasestorage.googleapis.com/v0/b/charity-project-395321.appspot.com/o/IMG_8705.jpg?alt=media&token=e9cb90f6-eede-4134-8fb6-b0680a2ebc1a'  );
     
+}
+
+#five {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/charity-project-395321.appspot.com/o/IMG-20220917-WA0005.jpg?alt=media&token=84234a4a-5b69-4baa-9db2-dc014caa5955');
+  
 }
   
   .box:hover {

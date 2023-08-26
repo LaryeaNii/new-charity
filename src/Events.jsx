@@ -33,7 +33,7 @@ const Events = () => {
 
   return (
     <div className="events-container">
-      {fetchError && <h1>{fetchError}</h1>}
+      {fetchError && <p>{fetchError}</p>}
       <div className="events-title">
         <h1>Take a look at our upcoming events</h1>
       </div>

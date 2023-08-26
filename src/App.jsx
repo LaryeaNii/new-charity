@@ -17,6 +17,7 @@ import Anniversary from './Anniversary';
 import Prison from './prison';
 import TestApp from './TestApp';
 import Psych from './Pysch';
+import More from './More';
 import GirlChild from './GirlChild';
 import Tour from './Tour';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -46,6 +47,7 @@ function App() {
         <Route path="/psych" element={<Psych/>} />
         <Route path="/girlchild" element={<GirlChild/>} />
         <Route path="/tour" element={<Tour/>} />
+        <Route path="/more" element={<More/>} />
         <Route path="/blogreader/:blogId" element={<BlogReader />} />
       </Routes>
       <Footer/>
