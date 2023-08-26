@@ -1,5 +1,7 @@
 import './Events.css';
 import supabase from "./config/supabaseclient";
+import Calendar from 'react-calendar'; 
+import 'react-calendar/dist/Calendar.css'
 import { useState, useEffect } from "react";
 
 const Events = () => {
@@ -55,6 +57,12 @@ const Events = () => {
               <div className="event-description">
                 <h3 className="event-description-date">{eventItem.date}</h3>
                 <p>{eventItem.description}</p>
+              </div>
+              <div className='calender-width'>
+              <div style={{ width: '300px' }}>
+                  <Calendar value={new Date(eventItem.the_date)} />
+              </div>
+               
               </div>
             </div>
           </div>
