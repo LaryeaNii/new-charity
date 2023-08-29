@@ -59,7 +59,7 @@ const Events = () => {
                 <p>{eventItem.description}</p>
               </div>
               <div className='calender-width'>
-              <div style={{ width: '340px' }}>
+              <div style={{ width: '360px'}}>
                   <Calendar value={new Date(eventItem.the_date)} />
               </div>
                
